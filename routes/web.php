@@ -9,7 +9,7 @@ use App\Http\Controllers\DetailPesananController;
 Route::resource('pelanggan', PelangganController::class);
 Route::resource('produk', ProdukController::class);
 Route::resource('pesanan', PesananController::class);
-Route::resource('detail_pesanan', DetailPesananController::class);
+Route::resource('detailpesanan', DetailPesananController::class);
 
 
 Route::get('/', function () {

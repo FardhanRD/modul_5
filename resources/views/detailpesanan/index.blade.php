@@ -20,7 +20,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($data as $detail)
+            @foreach($detailPesanan as $detail)
             <tr>
                 <td>{{ $detail->id }}</td>
                 <td>{{ $detail->pesanan_id }}</td>

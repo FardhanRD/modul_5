@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\DetailPesanan;
+use App\Models\Pesanan;
 use Illuminate\Http\Request;
 
 class DetailPesananController extends Controller
@@ -12,8 +13,8 @@ class DetailPesananController extends Controller
      */
     public function index()
     {
-        $detailPesanan = DetailPesanan::all();
-        return view('detailpesanan.index', compact('detailpesanan'));
+        $detailPesanan = DetailPesanan::with('pesanan', 'produk')->get();
+        return view('detailpesanan.index', compact('detailPesanan'));
     }
 
     /**
